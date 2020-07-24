@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JohnPop</title>
+    <link rel="stylesheet" href="animation.css" />
+</head>
+
+<body>
+    
+
+<div onclick="removeBubble('bubble1')" ontouchstart="removeBubble('bubble1')" class="bubbles" id="bubble1"><h1>J</h1></div> 
+
+<div onclick="removeBubble('bubble2')" ontouchstart="removeBubble('bubble2')" class="bubbles" id="bubble2"><h1>O</h1></div> 
+
+<div onclick="removeBubble('bubble3')" ontouchstart="removeBubble('bubble3')" class="bubbles" id="bubble3"><h1>H</h1></div> 
+
+<div onclick="removeBubble('bubble4')" ontouchstart="removeBubble('bubble4')" class="bubbles" id="bubble4"><h1>N</h1></div> 
+
+
+ <script>
+     function removeBubble(bubbleNumber){
+         const elem = document.getElementById(bubbleNumber)
+         document.body.removeChild(elem)
+         const allBubbles = document.getElementsByClassName("bubbles")
+         if(allBubbles.length < 1){
+             document.body.innerHTML="\
+             <div onclick=\"removeBubble('bubble1')\" ontouchstart=\"removeBubble('bubble1')\" class=\"bubbles\" id=\"bubble1\"><h1>J</h1></div> \
+<div onclick=\"removeBubble('bubble2')\" ontouchstart=\"removeBubble('bubble2')\" class=\"bubbles\" id=\"bubble2\"><h1>O</h1></div> \
+<div onclick=\"removeBubble('bubble3')\" ontouchstart=\"removeBubble('bubble3')\" class=\"bubbles\" id=\"bubble3\"><h1>H</h1></div> \
+<div onclick=\"removeBubble('bubble4')\" ontouchstart=\"removeBubble('bubble4')\" class=\"bubbles\" id=\"bubble4\"><h1>N</h1></div> " 
+         }
+     }
+ </script>   
+</body>
+
+
+</html>
